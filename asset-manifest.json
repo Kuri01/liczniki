@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/liczniki/app/static/css/main.20ab2b18.css",
+    "main.js": "/liczniki/app/static/js/main.22fd3cf0.js",
+    "index.html": "/liczniki/app/index.html",
+    "main.20ab2b18.css.map": "/liczniki/app/static/css/main.20ab2b18.css.map",
+    "main.22fd3cf0.js.map": "/liczniki/app/static/js/main.22fd3cf0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.20ab2b18.css",
+    "static/js/main.22fd3cf0.js"
+  ]
+}
