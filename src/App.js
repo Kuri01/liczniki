@@ -10,7 +10,7 @@ function App() {
   const [selectedId, setSelectedId] = useState("WSZYSTKIE");
   const [sortConfig, setSortConfig] = useState(null);
   const [dateRange, setDateRange] = useState([null, null]);
-  const [searchId, setSearchId] = useState(""); // Nowy stan dla wyszukiwania ID licznika
+  const [searchId, setSearchId] = useState("");
 
   const data = licznikiData.MeterData.flatMap(meter =>
     meter.readings.flatMap(reading =>
