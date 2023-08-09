@@ -6,10 +6,22 @@
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   margin: 50px auto;
   max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
 }
 
 .Select {
   margin-bottom: 20px;
+  width: 100%; 
+}
+
+.DatePicker {
+  width: 100%;
+}
+
+.TextField {
+  width: 100%; 
 }
 
 .Table {
@@ -38,12 +50,4 @@
 
 .TableSortLabel:hover {
   color: #555;
-}
-
-.DatePicker {
-  margin-bottom: 20px;
-}
-
-.TextField {
-  width: 200px;
 }

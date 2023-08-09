@@ -10,6 +10,7 @@ function App() {
   const [selectedId, setSelectedId] = useState("WSZYSTKIE");
   const [sortConfig, setSortConfig] = useState(null);
   const [dateRange, setDateRange] = useState([null, null]);
+  const [searchId, setSearchId] = useState(""); // Nowy stan dla wyszukiwania ID licznika
 
   const data = licznikiData.MeterData.flatMap(meter =>
     meter.readings.flatMap(reading =>
@@ -35,6 +36,22 @@ function App() {
     setDateRange([dateRange[0], date]);
   };
 
+  const availableDates = [...new Set(data.map(entry => entry.date))];
+
+  function subtractOneDayFromDate(dateObj) {
+    dateObj.setTime(dateObj.getTime() + (24 * 60 * 60 * 1000));
+    return dateObj;
+  }
+
+  const isDateAvailable = (date) => {
+    const newDate = subtractOneDayFromDate(new Date(date));
+    const dateStr = newDate.toISOString().split('T')[0];
+    return availableDates.includes(dateStr);
+  };
+
+
+
+
   const sortedData = [...data]
     .filter(entry =>
       (dateRange[0] ? new Date(entry.date) >= dateRange[0] : true) &&
@@ -58,14 +75,30 @@ function App() {
     setSortConfig({ key, direction });
   }
 
+  const filteredData = sortedData.filter(entry =>
+    (selectedId === "WSZYSTKIE" || entry.id === selectedId) &&
+    (searchId === "" || entry.id.includes(searchId))
+  );
+
   return (
     <div className="App">
-      <Select value={selectedId} onChange={e => setSelectedId(e.target.value)}>
-        <MenuItem value="WSZYSTKIE">WSZYSTKIE</MenuItem>
-        {licznikiData.MeterData.map(meter => (
-          <MenuItem key={meter.id} value={meter.id}>{meter.id}</MenuItem>
-        ))}
-      </Select>
+      <Grid container spacing={3} justifyContent="center">
+        <Grid item>
+          <TextField
+            label="Wyszukaj ID licznika"
+            value={searchId}
+            onChange={e => setSearchId(e.target.value)}
+          />
+        </Grid>
+        <Grid item>
+          <Select value={selectedId} onChange={e => setSelectedId(e.target.value)}>
+            <MenuItem value="WSZYSTKIE">WSZYSTKIE</MenuItem>
+            {licznikiData.MeterData.map(meter => (
+              <MenuItem key={meter.id} value={meter.id}>{meter.id}</MenuItem>
+            ))}
+          </Select>
+        </Grid>
+      </Grid>
       <LocalizationProvider dateAdapter={AdapterDateFns}>
         <Grid container spacing={3} justifyContent="center">
           <Grid item>
@@ -74,6 +107,7 @@ function App() {
               value={dateRange[0]}
               disableFuture
               onChange={handleStartDateChange}
+              shouldDisableDate={(date) => !isDateAvailable(date)}
               textField={(params) => <TextField {...params} />}
             />
           </Grid>
@@ -83,6 +117,7 @@ function App() {
               value={dateRange[1]}
               disableFuture
               onChange={handleEndDateChange}
+              shouldDisableDate={(date) => !isDateAvailable(date)}
               textField={(params) => <TextField {...params} />}
             />
           </Grid>
@@ -118,11 +153,12 @@ function App() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {sortedData.filter(entry => selectedId === "WSZYSTKIE" || entry.id === selectedId).map(entry => (
+          {filteredData.map(entry => (
             <TableRow key={`${entry.id}-${entry.date}-${entry.time}`}>
               <TableCell>{entry.date}</TableCell>
               <TableCell>{entry.time}</TableCell>
               <TableCell>{entry.value}</TableCell>
+              <TableCell>{entry.id}</TableCell>
             </TableRow>
           ))}
         </TableBody>
