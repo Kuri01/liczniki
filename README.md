@@ -21,7 +21,9 @@ Zainstaluj wszystkie zależności używając npm lub yarn.
 
 ```
 npm install
+-------------
 LUB
+-------------
 yarn install
 ```
 
@@ -32,7 +34,9 @@ Po zainstalowaniu wszystkich zależności, możesz uruchomić aplikację lokalni
 
 ```
 npm start
+-------------
 LUB
+-------------
 yarn start
 ```
 
@@ -51,7 +55,7 @@ npm or yarn package
 ## 🛠 Installation
 Clone this repository to your computer.
 
-(copy to bash)z
+(copy to bash)
 
 ```
 git clone https://github.com/Kuri01/liczniki.git
@@ -63,7 +67,9 @@ Install all dependencies using npm or yarn.
 
 ```
 npm install
+-------------
 OR
+-------------
 yarn install
 ```
 
@@ -74,7 +80,9 @@ After installing all dependencies, you can run the application locally:
 
 ```
 npm start
+-------------
 OR
+-------------
 yarn start
 ```
 
