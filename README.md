@@ -1,5 +1,5 @@
 # 🚀 Aplikacja do Wyświetlania Danych Licznika
-Aplikacja pozwala na przeglądanie danych z różnych liczników w danym zakresie dat. Umożliwia również sortowanie danych według daty, godziny oraz wartości.
+Aplikacja pozwala na przeglądanie danych z różnych liczników w danym zakresie dat. Umożliwia również sortowanie danych według daty, godziny oraz wartości. Możesz zobaczyć aplikację na żywo [tutaj](https://kuri01.github.io/liczniki/).
 
 ## 🔧 Wymagania
 Node.js (zalecana wersja 14 lub nowsza)
@@ -46,7 +46,7 @@ Aplikacja powinna być dostępna pod adresem: http://localhost:3000/.
 Jeśli napotkasz jakiekolwiek problemy lub masz pytania dotyczące aplikacji, prosimy o kontakt z Kamilem Kuriatą pod adresem contact@kamilkuriata.com.
 
 # 🚀 Meter Data Display Application
-This application allows you to browse data from various meters within a given date range. It also enables sorting of data by date, time, and value.
+This application allows you to browse data from various meters within a given date range. It also enables sorting of data by date, time, and value.  You can view the live application [here](https://kuri01.github.io/liczniki/).
 
 ## 🔧 Requirements
 Node.js (recommended version 14 or newer)
