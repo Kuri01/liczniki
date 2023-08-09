@@ -1,65 +1,84 @@
-Aplikacja do Wyświetlania Danych Licznika
+# 🚀 Aplikacja do Wyświetlania Danych Licznika
 Aplikacja pozwala na przeglądanie danych z różnych liczników w danym zakresie dat. Umożliwia również sortowanie danych według daty, godziny oraz wartości.
 
-Wymagania
+## 🔧 Wymagania
 Node.js (zalecana wersja 14 lub nowsza)
 Pakiet npm lub yarn
-Instalacja
+
+## 🛠 Instalacja
 Sklonuj to repozytorium na swój komputer.
 
-bash
-Copy code
+(copy to bash)
+
+```
 git clone https://github.com/Kuri01/liczniki.git
 cd liczniki
+```
+
 Zainstaluj wszystkie zależności używając npm lub yarn.
 
-bash
-Copy code
+(copy to bash)
+
+```
 npm install
-# LUB
+LUB
 yarn install
-Uruchomienie Lokalne
+```
+
+## 🚀 Uruchomienie Lokalne
 Po zainstalowaniu wszystkich zależności, możesz uruchomić aplikację lokalnie:
 
-bash
-Copy code
+(copy to bash)
+
+```
 npm start
-# LUB
+LUB
 yarn start
+```
+
 Aplikacja powinna być dostępna pod adresem: http://localhost:3000/.
 
-Wsparcie
+## 🤝 Wsparcie
 Jeśli napotkasz jakiekolwiek problemy lub masz pytania dotyczące aplikacji, prosimy o kontakt z Kamilem Kuriatą pod adresem contact@kamilkuriata.com.
 
-Meter Data Display Application
+# 🚀 Meter Data Display Application
 This application allows you to browse data from various meters within a given date range. It also enables sorting of data by date, time, and value.
 
-Requirements
+## 🔧 Requirements
 Node.js (recommended version 14 or newer)
 npm or yarn package
-Installation
+
+## 🛠 Installation
 Clone this repository to your computer.
 
-bash
-Copy code
+(copy to bash)z
+
+```
 git clone https://github.com/Kuri01/liczniki.git
 cd liczniki
+```
 Install all dependencies using npm or yarn.
 
-bash
-Copy code
+(copy to bash)
+
+```
 npm install
-# OR
+OR
 yarn install
-Local Launch
+```
+
+## 🚀 Local Launch
 After installing all dependencies, you can run the application locally:
 
-bash
-Copy code
+(copy to bash)
+
+```
 npm start
-# OR
+OR
 yarn start
+```
+
 The application should be accessible at: http://localhost:3000/.
 
-Support
+## 🤝Support
 If you encounter any issues or have questions regarding the application, please contact Kamil Kuriata at contact@kamilkuriata.com.
